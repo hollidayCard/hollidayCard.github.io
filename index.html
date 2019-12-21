@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <script>
+    
+    // ADD TWO LINES (AND ONLY TWO LINES!) 
+// FOR GOLAN'S BIRTHDAY CARD
+// COMMENT ABOVE IT YOUR BIRTHDAY WISHES
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  textSize(12);
+  
+  /*
+    Hi Golan, Happy birthday!! I am so thankful that you've given us a place on campus to be weird and relaxed :) Keep being awesome!
+    - Lukas
+  */
+  for (let i = 0, j = 20; i < j; i++)
+    rect(i * cos(i *0.01 * frameCount), i * height / j, width * (.5 * cos(frameCount * .01) + 1.), i * .5 * sin(frameCount * .01));
+  
+  
+  /*happy birthday golan! you're the best mentor ever. 
+  I so appreciate everything you do for the studio and 
+  for all of us <3 - Caroline */
+  fill(['green','purple', 'black'][frameCount%3]);
+  circle(mouseX, mouseY, frameCount%7);
+  
+  /*happy birthday golan!!! Thanks so much for everything you've done over these past few years. Thanks for making studio an inclusive place and helping everyone be their best selves ⋆★☆✯✰⋆★☆✯✰⋆★☆✯✰⋆★☆✯✰⋆★☆✯✰⋆★☆✯✰
+
+Tatyana*/
+  
+  textSize(32);
+  if(frameCount%13 == 0){ text(['Happy', 'Birthday', 'Golan', 'Arduino', "science", 'tech', 'art', 'code', 'javascript', 'semicolons', 'jank', 'studio', 'sfci' , 'STUDIO', 'p5' , 'science','computation','creative coder'][Math.floor(Math.random() * 18)],mouseX, mouseY)}
+  
+  /* happy birthday!! ever since that day so many years ago when you handed me that FORM+CODE book and said gruffy, "you gotta learn this," my idea of the future has expanded so much more than I ever thought possible. Thank you so much for the dreams you've helped me develop, and for giving us all a place in this school to call home -Olivia */
+  noFill();
+  square(10+(width)*(sin(frameCount)), 10, 10, 10);
+  
+          /* youre okay i guess ;;;;))) happy birthday Golan!!! Thanks for everything, I could go on forever. Seriously. SFCI will always have a special place in my heart. Gratefully yours, char*/
+stroke(1.5 + 1.5*cos( 6.28318*((millis()/1000)+0.30) ) * 255,0.5 + 0.5*cos( 6.28318*((millis()/1000)+0.20))*255,0.5 + 0.5*cos( 6.28318*((millis()/1000)+0.10) ) *255);
+ bezier(85* sin(frameCount/100)+ frameCount%width, 20 + frameCount%height, 90 + frameCount%height, 10 + sin(frameCount/100) + frameCount%height, 30 + frameCount%width , 30+ frameCount%width * sin(frameCount/100),85* sin(frameCount/100)+ frameCount%width, 20 + frameCount%height);
+  
+  /*Golan you're a life changer. That you liked my last project — ah, I was like – 'ok, I can graduate now.' — with much gratitude and highest of regards, Marisa Lu*/
+  fill(255,200,190);
+  ellipse(width/2, height/2, 0.5*width*sin(frameCount), 0.5*width*sin(frameCount/20));
+  
+  /*hi golan, happy birthday! I am so grateful for 
+  all of your mentorship and kindness these past 
+  two years, I've grown so much as an artist with your
+  help! The Studio has become a second home to me 
+  and I am incredibly grateful - Connie */
+  fill(map(cos(frameCount), 0, 1, 50, 150), map(cos(frameCount), 0, 1, 0, 100), map(cos(frameCount), 0, 1, 100, 200));
+  text("happy hollidays! :-)", width/2 + 2 * sin(frameCount/2), height/2 + 2 * cos(frameCount / 2));
+  
+  
+  /*happy birthday!! golan!! you've literally changed my life in so
+  many ways and i'm eternally grateful for it. to the future! ~aman*/
+  textAlign(CENTER, CENTER)
+  text('😂', Math.floor(random(0, 5))*(width/5) + width/10, Math.floor(random(0, 5))*(height/5) + height/10)
+  
+  
+  /*Happy birthday Golan! I hope u know how much u mean to your students and I just wanted to say thank u for all the good times in the studio. - peter  */
+  strokeWeight((sin(millis()/1000))*10);
+  
+  ellipse(width- (millis()/1000) * width% 1000,height,(800+millis()/1000) % 300 - millis()/1000,50 * millis()/1000 %500);
+  
+    /* Hi Golan, Happy (belated) Birthday! I'm so thankful to have been a member of the STUDIO lifestyle during the past few years — it's been so instrumental, in so many ways. — Cameron */
+var studioSplit = split("GOLAN ZONE", '');
+for (let i = 0, j = studioSplit.length; i < j; i++) {fill(color(0, 0, 255, 100)); textSize(i*10*millis()/1000%80); text(studioSplit[i], (mouseX+i*millis()/50%200)/2, mouseY);}
+  
+/* happy birthday, golan! being around here and learning from you 
+  and everyone else has been so valuable and empowering. Thank you 
+  for helping to make this place so potent and loving — gray */
+  noFill();
+  square(mouseY, mouseX, mouseY/50, mouseX/50); 
+
+}
+  
+
+    
+    
+    </script>
+  </body>
+</html>
